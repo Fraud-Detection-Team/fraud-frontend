@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ Fraud Detection API – FastAPI Backend
 
 This is a backend API service for detecting fraudulent transactions using a machine learning model. Built with **FastAPI**, the project supports various endpoints to assess fraud risks, user behavior, merchant category risk, and more.
@@ -76,3 +77,6 @@ uvicorn app.main:app --reload
    Go to http://localhost:8000/docs to view Swagger UI.
 
 
+=======
+# fraud-frontend
+>>>>>>> b79621d1cb3a2b455d313bf6fb4c97c849200afe

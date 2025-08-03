@@ -1,4 +1,3 @@
-// Sidebar.tsx
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -8,7 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import InsightsIcon from '@mui/icons-material/Insights';
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const navItems = [
     { label: 'Fraud Analytics Dashboard', target: 'dashboard', icon: <DashboardIcon /> },

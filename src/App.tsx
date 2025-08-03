@@ -16,7 +16,7 @@ const App: React.FC = () => {
           sx={{
             flexGrow: 1,
             p: 3,
-            ml: { md: '100px' },
+            ml: { md: '200px' },
           }}
         >
           <Typography variant="h1" gutterBottom id="top">

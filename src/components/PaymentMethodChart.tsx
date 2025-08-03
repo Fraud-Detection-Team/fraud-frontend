@@ -1,4 +1,3 @@
-// src/components/FraudByPaymentMethodChart.tsx
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -7,7 +6,7 @@ import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 import type { FraudByPaymentMethod } from '../types/analytics';
 import { fetchFraudByPaymentMethod } from '../api/client';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AA00FF', '#FF4F81'];
+const COLORS = ['#FF8042', '#0088FE', '#FFBB28', '#00C49F', '#FF4F81'];
 
 const FraudByPaymentMethodChart: React.FC = () => {
     const [data, setData] = useState<FraudByPaymentMethod[]>([]);

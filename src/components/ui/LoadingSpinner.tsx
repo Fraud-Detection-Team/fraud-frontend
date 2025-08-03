@@ -1,14 +1,14 @@
 import React from 'react';
-import './LoadingSpinner.css'; // Create this file (see CSS below)
+import './LoadingSpinner.css';
 
 interface LoadingSpinnerProps {
   size?: 'small' | 'medium' | 'large';
   color?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'medium', 
-  color = '#4a6fa5' 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'medium',
+  color = '#4a6fa5'
 }) => {
   const sizeMap = {
     small: '20px',
@@ -18,7 +18,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className="loading-spinner-container">
-      <div 
+      <div
         className="loading-spinner"
         style={{
           width: sizeMap[size],

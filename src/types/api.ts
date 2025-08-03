@@ -1,4 +1,3 @@
-// types/api.ts
 export interface MerchantRiskResponse {
   mcc: string;
   category: string;

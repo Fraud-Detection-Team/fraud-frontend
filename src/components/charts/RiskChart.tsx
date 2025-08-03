@@ -25,27 +25,27 @@ export const RiskChart: React.FC<RiskChartProps> = ({
             name: item.label,
             value: item.value
           }))}
-          margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+          margin={{ top: 20, right: 50, left: 50, bottom: 20 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis 
-            dataKey="name" 
-            label={{ value: xLabel, position: 'bottom' }} 
+          <XAxis
+            dataKey="name"
+            label={{ value: xLabel, position: 'bottom' }}
           />
-          <YAxis 
-            label={{ 
-              value: yLabel, 
-              angle: -90, 
-              position: 'left' 
-            }} 
+          <YAxis
+            label={{
+              value: yLabel,
+              angle: -90,
+              position: 'left'
+            }}
           />
-          <Tooltip 
+          <Tooltip
             formatter={(value: number) => [`${value}%`, yLabel]}
             labelFormatter={(label: string) => `${xLabel}: ${label}`}
           />
-          <Bar 
-            dataKey="value" 
-            fill={barColor} 
+          <Bar
+            dataKey="value"
+            fill={barColor}
             name={yLabel}
           />
         </BarChart>

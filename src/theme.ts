@@ -14,14 +14,20 @@ const theme = createTheme({
   palette: {
     mode: 'light', 
     background: {
-      default: '#f0f4f8', // light grayish blue
-      paper: '#FFFFFF', // white
+      default: '#f0f4f8',
+      paper: '#FFFFFF', 
     },
     primary: {
-      main: '#1976d2', // blue
+      main: '#297ac1', 
     },
     secondary: {
-      main: '#dc004e', // pinkish red
+      main: '#dc004e', 
+    },
+    error: {
+      main: '#b8173f', 
+    },
+    success: {
+      main: '#17B890', 
     },
   },
 });

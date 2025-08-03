@@ -1,31 +1,54 @@
 import { useEffect, useState } from 'react';
 import { fetchMerchantRisk } from '../api/client';
+import {
+  Box,
+  Typography,
+  TextField,
+  Paper,
+  CircularProgress,
+} from '@mui/material';
 
-export default function MerchantRiskDashboard({ mcc, onMccChange }: {
+interface MerchantRiskDashboardProps {
   mcc: string;
   onMccChange: (mcc: string) => void;
-}) {
+}
+
+export default function MerchantRiskDashboard({ mcc, onMccChange }: MerchantRiskDashboardProps) {
   const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchMerchantRisk(mcc).then(setData);
+    if (!mcc) return;
+    setLoading(true);
+    fetchMerchantRisk(mcc)
+      .then(setData)
+      .finally(() => setLoading(false));
   }, [mcc]);
 
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Merchant Risk</h2>
-      <input
+    <Box sx={{ p: 3 }}>
+
+      <TextField
+        label="Enter MCC code"
+        variant="outlined"
         value={mcc}
         onChange={(e) => onMccChange(e.target.value)}
-        className="border p-2 rounded mb-4 w-full"
-        placeholder="Enter MCC code"
+        fullWidth
+        sx={{ mb: 3 }}
       />
-      {data && (
-        <div>
-          <p>Category: {data.category}</p>
-          <p>Fraud Rate: {(data.fraud_rate * 100).toFixed(2)}%</p>
-        </div>
+
+      {loading && <CircularProgress />}
+
+      {!loading && data && (
+        <Paper elevation={3} sx={{ p: 2 }}>
+          <Typography variant="body1">
+            <strong>Category:</strong> {data.category}
+          </Typography>
+          <Typography variant="body1">
+            <strong>Fraud Rate:</strong> {(data.fraud_rate * 100).toFixed(2)}%
+          </Typography>
+        </Paper>
       )}
-    </div>
+    </Box>
   );
 }

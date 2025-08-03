@@ -1,15 +1,31 @@
 import React from 'react';
 import Dashboard from './pages/Dashboard';
-import './App.css';
+import { Box, Typography, CssBaseline } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import Sidebar from './components/layout/SideBar';
+import theme from './theme'; // 👈 import your theme
 
 const App: React.FC = () => {
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>Payment Fraud Dashboard</h1>
-      </header>
-      <Dashboard />
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* Apply global background and font styles */}
+      <Box sx={{ display: 'flex', bgcolor: 'background.default', minHeight: '100vh' }}>
+        <Sidebar />
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            ml: { md: '100px' },
+          }}
+        >
+          <Typography variant="h1" gutterBottom id="top">
+            Fraud Analytics Dashboard
+          </Typography>
+          <Dashboard />
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
 };
 

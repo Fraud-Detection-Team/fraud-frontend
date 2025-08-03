@@ -16,6 +16,10 @@
   gap: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dashboard-card {
   background: white;
   border-radius: 8px;

@@ -1,8 +1,5 @@
-// App.tsx
 import React from 'react';
-import { MerchantRiskDashboard } from './components/MerchantRiskDashboard';
-import FraudPredictor from './components/FraudPredictor';
-import CompromisedCards from './components/CompromisedCards';
+import Dashboard from './pages/Dashboard';
 import './App.css';
 
 const App: React.FC = () => {
@@ -11,11 +8,7 @@ const App: React.FC = () => {
       <header className="app-header">
         <h1>Payment Fraud Dashboard</h1>
       </header>
-      <div className="dashboard-grid">
-        <MerchantRiskDashboard />
-        <FraudPredictor />
-        <CompromisedCards />
-      </div>
+      <Dashboard />
     </div>
   );
 };

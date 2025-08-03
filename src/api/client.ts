@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE;
+import type { MCCFraud } from '../types/analytics';
 
 export const fetchMerchantRisk = async (mcc: string) => {
   const res = await fetch(`${API_BASE}/merchants/risk?mcc=${mcc}`);
@@ -21,5 +22,11 @@ export const predictFraud = async (data: {
 
 export const fetchCompromisedCards = async () => {
   const res = await fetch(`${API_BASE}/cards/compromised`);
+  return await res.json();
+};
+
+export const fetchTopMCCFraud = async (): Promise<MCCFraud[]> => {
+  const res = await fetch(`${API_BASE}/Top5Merchant/fraud/by-mcc`);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
   return await res.json();
 };

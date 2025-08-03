@@ -1,5 +1,6 @@
-export type MCCFraud = {
-    mcc: number;
-    fraud_rate: number;
-    category_name: string;
-  };
+// types/analytics.ts
+export interface MCCFraud {
+  mcc: string;
+  category: string; // ✅ was category_name?
+  fraud_rate: number;
+}

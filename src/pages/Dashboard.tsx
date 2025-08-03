@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import MerchantRisk from '../components/MerchantRisk';
 import FraudPredictor from '../components/FraudPredictor';
 import CompromisedCards from '../components/CompromisedCards';

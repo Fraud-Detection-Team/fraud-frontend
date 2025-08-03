@@ -22,3 +22,4 @@ export interface FraudInput {
   mcc: string;
   errors: string;
 }
+

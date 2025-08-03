@@ -1,6 +1,6 @@
 // App.tsx
 import React from 'react';
-import { MerchantRiskDashboard } from 'c:/Users/hengl/microservice-dashboard/src/components/MerchantRiskDashboard';
+import { MerchantRiskDashboard } from './components/MerchantRiskDashboard';
 import FraudPredictor from './components/FraudPredictor';
 import CompromisedCards from './components/CompromisedCards';
 import './App.css';

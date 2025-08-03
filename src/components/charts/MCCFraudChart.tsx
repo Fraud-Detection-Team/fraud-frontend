@@ -1,6 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement } from 'chart.js';
-import type { MCCFraud } from '../../types/analytics';
+import type { MCCFraud } from './../../types/analytics';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
 

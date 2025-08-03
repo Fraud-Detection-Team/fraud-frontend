@@ -28,13 +28,13 @@ export default function FraudPredictor() {
   };
 
   return (
-    <Card elevation={3} sx={{ maxWidth: 500, mx: 'auto', my: 4 }}>
+    <Card elevation={3} sx={{ borderRadius: 3, maxWidth: 800, mx: 'auto', my: 4 }}>
       <CardContent>
         <Typography variant="body2" color="text.secondary" mb={2}>
           Use this tool to predict the likelihood of fraud based on transaction details.
         </Typography>
 
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box component="form" onSubmit={handleSubmit} >
           <Stack spacing={2}>
             <TextField
               label="Transaction Amount"

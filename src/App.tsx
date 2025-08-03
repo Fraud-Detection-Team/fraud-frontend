@@ -8,7 +8,7 @@ import Navbar from './components/layout/Navbar';
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline /> {/* Apply global background and font styles */}
+      <CssBaseline />
       <Box sx={{ display: 'flex', bgcolor: 'background.default', minHeight: '100vh' }}>
         <Navbar />
         <Box

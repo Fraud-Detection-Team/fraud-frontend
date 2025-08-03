@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Box, Paper, Typography, CircularProgress } from '@mui/material';
-import { PieChart, Pie, Tooltip, Cell, Legend, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 import type { FraudByPaymentMethod } from '../types/analytics';
 import { fetchFraudByPaymentMethod } from '../api/client';
 
@@ -36,7 +36,7 @@ const FraudByPaymentMethodChart: React.FC = () => {
     }));
 
     return (
-        <Paper elevation={3} sx={{ p: 3, borderRadius: 3, maxWidth: 600, mx: 'auto' }}>
+        <Paper elevation={3} sx={{ p: 3, borderRadius: 3, maxWidth: 800, mx: 'auto' }}>
             <Typography variant="h6" align="center" gutterBottom>
                 Fraud by Payment Method
             </Typography>
@@ -46,7 +46,7 @@ const FraudByPaymentMethodChart: React.FC = () => {
                     <CircularProgress />
                 </Box>
             ) : (
-                <ResponsiveContainer width="100%" height={400}>
+                <ResponsiveContainer width={700} height={480}>
                     <PieChart>
                         <Pie
                             data={chartData}
@@ -61,12 +61,6 @@ const FraudByPaymentMethodChart: React.FC = () => {
                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
                         </Pie>
-                        <Tooltip
-                            formatter={(value: number, entry: any) => [
-                                `${(value * 100).toFixed(2)}%`,
-                                entry?.payload?.name ?? 'Unknown',
-                            ]}
-                        />
                         <Legend layout="horizontal" verticalAlign="bottom" align="center" />
                     </PieChart>
                 </ResponsiveContainer>

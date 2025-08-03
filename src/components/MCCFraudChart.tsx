@@ -74,7 +74,7 @@ export default function MCCFraudChart({ data }: { data: MCCFraud[] }) {
         <Typography variant="body2" color="text.secondary" gutterBottom>
           These are the top 20 merchant categories with the highest fraud rates.
         </Typography>
-        <Box mt={2}>
+        <Box mt={2} display="flex" alignItems="center" height={400}>
           <Bar data={chartData} options={chartOptions} />
         </Box>
       </CardContent>

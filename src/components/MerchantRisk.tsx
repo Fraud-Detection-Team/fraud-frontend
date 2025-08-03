@@ -26,29 +26,31 @@ export default function MerchantRiskDashboard({ mcc, onMccChange }: MerchantRisk
   }, [mcc]);
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Paper elevation={3} sx={{ p: 3, borderRadius: 3, maxWidth: 800, mx: 'auto' }}>
+      <Box sx={{ p: 3 }}>
 
-      <TextField
-        label="Enter MCC code"
-        variant="outlined"
-        value={mcc}
-        onChange={(e) => onMccChange(e.target.value)}
-        fullWidth
-        sx={{ mb: 3 }}
-      />
+        <TextField
+          label="Enter MCC code"
+          variant="outlined"
+          value={mcc}
+          onChange={(e) => onMccChange(e.target.value)}
+          fullWidth
+          sx={{ mb: 3 }}
+        />
 
-      {loading && <CircularProgress />}
+        {loading && <CircularProgress />}
 
-      {!loading && data && (
-        <Paper elevation={3} sx={{ p: 2 }}>
-          <Typography variant="body1">
-            <strong>Category:</strong> {data.category}
-          </Typography>
-          <Typography variant="body1">
-            <strong>Fraud Rate:</strong> {(data.fraud_rate * 100).toFixed(2)}%
-          </Typography>
-        </Paper>
-      )}
-    </Box>
+        {!loading && data && (
+          <Paper elevation={3} sx={{ p: 2 }}>
+            <Typography variant="body1">
+              <strong>Category:</strong> {data.category}
+            </Typography>
+            <Typography variant="body1">
+              <strong>Fraud Rate:</strong> {(data.fraud_rate * 100).toFixed(2)}%
+            </Typography>
+          </Paper>
+        )}
+      </Box>
+    </Paper >
   );
 }

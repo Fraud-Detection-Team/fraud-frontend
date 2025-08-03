@@ -60,12 +60,12 @@ const TopUsersChart: React.FC = () => {
                         Loading...
                     </Typography>
                 ) : (
-                    <Box sx={{ height: 400 }}>
+                    <Box sx={{ height: 480 }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
                                 layout="vertical"
                                 data={chartData}
-                                margin={{ top: 20, right: 30, left: 100, bottom: 20 }}
+                                margin={{ top: 20, right: 50, left: 50, bottom: 20 }}
                             >
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis

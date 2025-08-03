@@ -4,7 +4,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Roboto, sans-serif',
     h1: {
-      fontSize: '2rem',
+      fontSize: '2.5rem',
       fontWeight: 600,
     },
     body1: {
@@ -12,8 +12,10 @@ const theme = createTheme({
     },
   },
   palette: {
+    mode: 'light', 
     background: {
-      default: '#f5f5f5', // light gray background
+      default: '#f0f4f8', // light grayish blue
+      paper: '#FFFFFF', // white
     },
     primary: {
       main: '#1976d2', // blue

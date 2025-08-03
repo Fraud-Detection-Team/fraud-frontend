@@ -6,6 +6,7 @@ import { fetchTopMCCFraud } from '../api/client';
 import type { MCCFraud } from '../types/analytics';
 import TopUsersChart from '../components/TopUsersChart';
 import FraudByPaymentMethodChart from '../components/PaymentMethodChart';
+import './../styles/dashboard.css';
 
 export default function Dashboard() {
   const [mcc, setMcc] = useState('5812');
@@ -25,7 +26,7 @@ export default function Dashboard() {
         <MerchantRisk mcc={mcc} onMccChange={setMcc} />
       </div>
       <div className="card" id="fraud-predictor">
-        <h2 className="text-lg font-semibold">Fraud Prediction Tool</h2>
+        <h2 className="text-lg font-semibold">Fraud Predictor</h2>
         <FraudPredictor />
       </div>
       <div className="card md:col-span-2" id="fraud-rate-mcc">

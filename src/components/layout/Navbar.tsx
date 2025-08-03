@@ -29,7 +29,7 @@ export default function Navbar() {
                 [`& .MuiDrawer-paper`]: {
                     width: drawerWidth,
                     boxSizing: 'border-box',
-                    backgroundColor: '#f5f5f5',
+                    backgroundColor: '#C3CEDA',
                 },
                 display: { xs: 'none', md: 'block' },
             }}

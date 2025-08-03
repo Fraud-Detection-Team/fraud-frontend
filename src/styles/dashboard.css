@@ -1,40 +1,5 @@
-/* src/styles/dashboard.css */
-.dashboard-container {
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 1800px;
-  margin: 0 auto;
-}
-
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 20px;
-}
-
-.dashboard-card {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-card.full-width {
-  grid-column: 1 / -1;
-}
-
-.chart-container {
-  height: 400px;
-  margin-top: 16px;
+h2 {
+  margin-top: 4rem;
 }
 
 .loading-spinner {
@@ -69,7 +34,6 @@ th {
   font-weight: 600;
 }
 
-/* Add to your dashboard.css */
 .loading-spinner {
   display: flex;
   flex-direction: column;

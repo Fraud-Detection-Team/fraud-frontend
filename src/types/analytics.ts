@@ -6,6 +6,16 @@ export interface MCCFraud {
 }
 
 export interface TopUser {
-  user: string;
-  ratio: number; // Percentage of total spending
+  user_id: string;
+  income: number;
+  monthly_spending: number;
+  total_spending: number;
+  spending_ratio: number;
+}
+
+export interface FraudByPaymentMethod {
+  method: string;
+  fraud_rate: number;
+  frauds: number;
+  total: number;
 }

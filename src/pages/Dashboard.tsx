@@ -6,7 +6,7 @@ import MCCFraudChart from '../components/charts/MCCFraudChart';
 import { fetchTopMCCFraud } from '../api/client';
 import type { MCCFraud } from '../types/analytics';
 import TopUsersChart from '../components/charts/TopUsersChart';
-
+import FraudByPaymentMethodChart from '../components/charts/PaymentMethodChart';
 
 export default function Dashboard() {
   const [mcc, setMcc] = useState('5812');
@@ -31,13 +31,17 @@ export default function Dashboard() {
         <CompromisedCards />
       </div>
       <div className="card md:col-span-2">
-        <h3 className="text-lg font-semibold">Top 5 MCC Fraud Rates</h3>
+        <h3 className="text-lg font-semibold">Fraud Rate by Merchant Category (MCC)</h3>
         {chartError && <p className="text-red-500">{chartError}</p>}
         {fraudData.length > 0 && <MCCFraudChart data={fraudData} />}
       </div>
       <div className="card md:col-span-2">
-        <h2 className="text-xl font-semibold mb-2">Top Users by Fraud Ratio</h2>
+        <h2 className="text-xl font-semibold mb-2">Top Risk Indicators: Spending Ratio</h2>
         <TopUsersChart />
+      </div>
+      <div className="bg-white rounded-2xl shadow-md p-4">
+        <h2 className="text-lg font-semibold mb-2">Fraud Rate by Transaction Method</h2>
+        <FraudByPaymentMethodChart />
       </div>
     </div>
   );

@@ -30,9 +30,9 @@ export const MerchantRiskDashboard: React.FC = () => {
       <h2>Merchant Risk Analysis</h2>
       <div className="input-group">
         <label>MCC Code:</label>
-        <input 
-          value={mcc} 
-          onChange={(e) => setMcc(e.target.value)} 
+        <input
+          value={mcc}
+          onChange={(e) => setMcc(e.target.value)}
           placeholder="Enter MCC code"
         />
         <button onClick={loadData}>Refresh</button>

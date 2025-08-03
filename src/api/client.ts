@@ -36,3 +36,9 @@ export const fetchTopUsers = async () => {
   if (!res.ok) throw new Error(`API error: ${res.status}`);
   return await res.json();
 };
+
+export const fetchFraudByPaymentMethod = async () => {
+  const res = await fetch(`${API_BASE}/payment_method/fraud/by-payment-method`);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  return await res.json();
+}

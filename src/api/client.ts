@@ -30,3 +30,9 @@ export const fetchTopMCCFraud = async (): Promise<MCCFraud[]> => {
   if (!res.ok) throw new Error(`API error: ${res.status}`);
   return await res.json();
 };
+
+export const fetchTopUsers = async () => {
+  const res = await fetch(`${API_BASE}/TopUsers/spending/top-users`);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  return await res.json();
+};

@@ -4,3 +4,8 @@ export interface MCCFraud {
   category: string; // ✅ was category_name?
   fraud_rate: number;
 }
+
+export interface TopUser {
+  user: string;
+  ratio: number; // Percentage of total spending
+}

@@ -2,8 +2,8 @@ import React from 'react';
 import Dashboard from './pages/Dashboard';
 import { Box, Typography, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 import Sidebar from './components/layout/SideBar';
-import theme from './theme'; // 👈 import your theme
 
 const App: React.FC = () => {
   return (

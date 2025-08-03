@@ -1,5 +1,4 @@
 // Sidebar.tsx
-import * as React from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

@@ -62,7 +62,7 @@ const FraudByPaymentMethodChart: React.FC = () => {
                             ))}
                         </Pie>
                         <Tooltip
-                            formatter={(value: number, name: string, entry: any) => [
+                            formatter={(value: number, entry: any) => [
                                 `${(value * 100).toFixed(2)}%`,
                                 entry?.payload?.name ?? 'Unknown',
                             ]}

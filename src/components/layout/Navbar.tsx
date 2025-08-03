@@ -19,7 +19,7 @@ const navItems = [
     { label: 'Fraud rate by Transaction Method', target: 'payment-method-chart', icon: <InsightsIcon /> },
 ];
 
-export default function Sidebar() {
+export default function Navbar() {
     return (
         <Drawer
             variant="permanent"
